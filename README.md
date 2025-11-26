@@ -5,8 +5,8 @@ ChefKiss es una aplicación móvil nativa desarrollada en **Kotlin (Jetpack Comp
 El sistema se integra con un Backend de Microservicios en **Spring Boot** y una base de datos **MySQL** desplegada en la nube (Railway).
 
 ## 👥 Integrantes
-* Bastian David
-* (Nombre de tu compañero si tienes)
+* Benjamin David Espinoza Rojas
+  
 
 ## 🚀 Funcionalidades Principales
 1.  **Autenticación Segura:** Registro e inicio de sesión de usuarios contra base de datos remota.
@@ -48,7 +48,4 @@ El sistema se integra con un Backend de Microservicios en **Spring Boot** y una 
 3.  Conectar un dispositivo físico o usar un emulador.
 4.  Dar clic en "Run". (Asegúrese de que el backend esté corriendo y la IP en `RetrofitClient` sea correcta).
 
-## 📦 Entregables Adjuntos
-En la carpeta `/release` se encuentra:
-* **APK Firmado:** `app-release.apk`
-* **Llave de Firma:** `chefkiss_llave.jks`
+
