@@ -1,50 +1,54 @@
-📱 Características principales
-	•	Registro e inicio de sesión con validación local.
-	•	Pantalla principal (Home) con navegación entre secciones.
-	•	Publicación de reseñas con cámara integrada.
-	•	Perfil de usuario editable con opción de cerrar sesión.
-	•	Configuraciones con notificaciones y preferencias.
-	•	Asistente culinario simulado (interfaz de IA).
-	•	Persistencia local de usuario mediante DataStore.
+# ChefKiss  - Plataforma de Reseñas Gastronómicas
 
-⸻
+ChefKiss es una aplicación móvil nativa desarrollada en **Kotlin (Jetpack Compose)** que permite a los usuarios descubrir restaurantes, ver reseñas verificadas y compartir sus propias experiencias gastronómicas validadas mediante fotografía en tiempo real.
 
-🧩 Estructura del proyecto
+El sistema se integra con un Backend de Microservicios en **Spring Boot** y una base de datos **MySQL** desplegada en la nube (Railway).
 
-app/
-├── data/
-│   ├── local/ (almacenamiento local y DataStore)
-│   └── model/ (modelos de datos: User, Review, etc.)
-├── ui/
-│   ├── screens/ (pantallas Compose: Login, Register, Home, etc.)
-│   └── theme/ (colores, tipografía, estilos)
-├── viewmodel/
-│   └── ChefKissViewModel.kt
-└── MainActivity.kt
+## 👥 Integrantes
+* Bastian David
+* (Nombre de tu compañero si tienes)
 
-⸻
+## 🚀 Funcionalidades Principales
+1.  **Autenticación Segura:** Registro e inicio de sesión de usuarios contra base de datos remota.
+2.  **Exploración de Restaurantes:** Visualización de locales con detalles, fotos y características.
+3.  **Reseñas Verificadas:** Publicación de opiniones (CRUD) que requiere validación fotográfica mediante la cámara del dispositivo.
+4.  **API Externa:** Integración con *TheMealDB* para sugerencias de recetas diarias en el Home.
+5.  **Modo Offline/Online:** Arquitectura robusta con Retrofit y gestión de estados.
 
-⚙️ Tecnologías utilizadas
-	•	Lenguaje: Kotlin
-	•	Framework UI: Jetpack Compose
-	•	Arquitectura: MVVM (Model-View-ViewModel)
-	•	Persistencia: Android DataStore
-	•	Control de versiones: Git + GitHub
+## 🛠️ Stack Tecnológico
+* **Frontend:** Android (Kotlin), Jetpack Compose, Retrofit, CameraX, Coil.
+* **Backend:** Java 17, Spring Boot 3.4, Spring Data JPA.
+* **Base de Datos:** MySQL (Railway).
+* **Testing:** JUnit (Pruebas unitarias de validación de lógica).
+* **Herramientas:** Android Studio, Visual Studio Code, Postman.
 
-⸻
+## 🔌 Endpoints Utilizados
 
-👨‍💻 Desarrollador
+### Microservicios Propios (Spring Boot)
+* `POST /api/auth/register` - Registro de nuevos usuarios.
+* `POST /api/auth/login` - Autenticación de usuarios.
+* `GET /api/restaurants` - Obtención del listado de restaurantes.
+* `GET /api/reviews` - Obtención de todas las reseñas.
+* `POST /api/reviews` - Publicación de una nueva reseña con validación.
 
-Nombre: Benjamín Espinoza
-Carrera: Ingeniería en Informática
-Institución: Duoc UC
-Asignatura: Desarrollo de Aplicaciones Móviles (DSY1105)
-Docente: (Agregar nombre del profesor si lo deseas)
+### API Externa
+* `GET https://www.themealdb.com/api/json/v1/1/random.php` - Obtención de receta aleatoria del día.
 
-⸻
+## 📲 Pasos para Ejecutar
 
-🚀 Ejecución
-	1.	Clonar el repositorio:
-git clone https://github.com/Benjamin-0101/CHEFKISS.git
-	2.	Abrir el proyecto en Android Studio.
-	3.	Ejecutar en un emulador o dispositivo físico con Android 9.0 o superior.
+### Backend
+1.  Clonar el repositorio.
+2.  Abrir la carpeta `backend` en IntelliJ o VS Code.
+3.  Configurar `application.properties` con las credenciales de la base de datos.
+4.  Ejecutar `BackendApplication.java`. El servidor iniciará en el puerto `8080` y creará los datos semilla automáticamente (`DataSeeder`).
+
+### Aplicación Móvil
+1.  Abrir la carpeta `app` en Android Studio.
+2.  Sincronizar el proyecto con Gradle.
+3.  Conectar un dispositivo físico o usar un emulador.
+4.  Dar clic en "Run". (Asegúrese de que el backend esté corriendo y la IP en `RetrofitClient` sea correcta).
+
+## 📦 Entregables Adjuntos
+En la carpeta `/release` se encuentra:
+* **APK Firmado:** `app-release.apk`
+* **Llave de Firma:** `chefkiss_llave.jks`
