@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Tema base: se usa solo para lanzar la app antes de Compose -->
+    <style name="Theme.ChefKiss" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+
+        <!-- Colores mínimos -->
+        <item name="colorPrimary">#FF6B4A</item>
+        <item name="colorPrimaryVariant">#E64A19</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#4A90E2</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+    </style>
+
+</resources>
